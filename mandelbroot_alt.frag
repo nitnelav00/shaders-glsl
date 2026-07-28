@@ -1,3 +1,5 @@
+// Nitnelav00 2025
+
 vec2 pow2i(vec2 v) {
 	return vec2(
 		v.x*v.x - v.y*v.y,

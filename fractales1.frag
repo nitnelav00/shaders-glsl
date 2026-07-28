@@ -1,7 +1,7 @@
-
+// Nitnelav00 2023
 #define BOUCLE 600
-#define DIST 140
-#define COUNTMAX 150
+#define DIST 140.
+#define COUNTMAX 150.
 
 vec2 pow2i(vec2 v) {
 	return vec2(
@@ -28,19 +28,19 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
 	vec2 a = uv;
 
-	float count = 0;
+	float count = 0.;
 	for (int i = 0; i < BOUCLE; i++) {
 		a = pow2i(a);
-		a += vec2(m.x*2-1,m.y*2-1);
+		a += vec2(m.x*2.-1.,m.y*2.-1.);
 		if (a.x > DIST || a.y > DIST)
 			break;
 		count++;
 	}
 
 	vec3 color = vec3(0.0);
-	color.r = (count*2) / COUNTMAX;
+	color.r = (count*2.) / COUNTMAX;
 	color.g = count / COUNTMAX;
-	color.b = (count*4)/COUNTMAX;
+	color.b = (count*4.)/COUNTMAX;
 
 	fragColor = vec4(color,1.0);
 }

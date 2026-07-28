@@ -1,3 +1,5 @@
+// Nitnelav00 2023
+
 //////////////////////////////////////////////////////////////////////
 // sRGB color transform and inverse from 
 // https://bottosson.github.io/posts/colorwrong/#what-can-we-do%3F
@@ -60,7 +62,7 @@ vec3 linear_srgb_from_oklab(vec3 c) {
 //////////////////////////////////////////////////////////////////////
 
 #define BOUCLE 600
-#define DIST 200
+#define DIST 200.
 
 vec2 pow2i(vec2 v) {
     return vec2(
@@ -90,14 +92,14 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     float count = 0.0;
     for (int i = 0; i < BOUCLE; i++) {
         z = pow2i(z);
-        z += vec2(m.x*2-1,m.y*2-1);
+        z += vec2(m.x*2.-1.,m.y*2.-1.);
         if (dot(z,z) > DIST)
             break;
         count++;
     }
 
     vec3 color = vec3(0.0);
-    color.x = smoothstep(0, 50, count);
+    color.x = smoothstep(0., 50., count);
     color.y = 0.5*cos(count / 3.1415926535);
     color.z = 0.5*sin(count / 3.1415926535);
     

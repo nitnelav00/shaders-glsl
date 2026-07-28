@@ -1,5 +1,3 @@
-#version 450
-#pragma optimize(on)
 uniform float iTime;
 uniform vec2 iResolution;
 

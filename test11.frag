@@ -1,7 +1,7 @@
-//
+// Nitnelav00 2024
 
 float sig(float x, float vitesse){
-	return 1.0/(1.0+pow(2,-x*vitesse));
+	return 1.0/(1.0+pow(2.,-x*vitesse));
 }
 
 float norml(float x, float vitesse) {

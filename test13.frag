@@ -1,4 +1,4 @@
-
+// Nitnelav00 2025
 #pragma optimize(on)
 
 vec2 pow2i(vec2 v) {

@@ -1,3 +1,5 @@
+// Nitnelav00 2023
+
 vec2 pow2i(vec2 v) {
 	return vec2(
 		v.x*v.x - v.y*v.y,
@@ -13,8 +15,8 @@ vec2 muli(vec2 a, vec2 b){
 }
 
 #define BOUCLE 600
-#define DIST 300
-#define COUNTMAX 150
+#define DIST 300.
+#define COUNTMAX 150.
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
@@ -25,7 +27,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
 	vec2 a = uv;
 
-	float count = 0;
+	float count = 0.;
 	int rez = 0;
 	for (int i = 0; i < BOUCLE; i++) {
 		a = pow2i(a);
@@ -38,9 +40,9 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 	}
 
 	vec3 color = vec3(0.0);
-	color.r = (count*2) / COUNTMAX;
+	color.r = (count*2.) / COUNTMAX;
 	color.g = count / COUNTMAX;
-	color.b = (count*4)/COUNTMAX;
+	color.b = (count*4.)/COUNTMAX;
 
 	fragColor = vec4(color,1.0);
 }
